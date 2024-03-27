@@ -16,11 +16,38 @@ import tnledger
 #Function giving the user the choice of which state the want to go to
 def user_select_state():
     print("Select a state to scrape:")
-    print("1: Idaho")
-    print("2: Georgia")
-    print("3: Tennessee")
-    print("4: Nevada")
-    print("5: California")
+    print("1: Alabama")
+    print("2: Arizona")
+    print("3: Arkansas")
+    print("4: California")
+    print("5: Colorado")
+    print("6: Georgia")
+    print("7: Idaho")
+    print("8: Illinois")
+    print("9: Indiana")
+    print("10: Kansas")
+    print("11: Maine")
+    print("12: Massachusetts")
+    print("13: Minnesota")
+    print("14: Mississippi")
+    print("15: Missouri")
+    print("16: Nebraska")
+    print("17: Nevada")
+    print("18: New Jersey")
+    print("19: New Mexico")
+    print("10: North Carolina")
+    print("21: Ohio")
+    print("22: Oregon")
+    print("23: Pennsylvania")
+    print("24: South Carolina")
+    print("25: South Dakota")
+    print("26: Tennessee")
+    print("27: Tennessee Ledger")
+    print("28: Texas")
+    print("29: Utah")
+    print("30: Virginia")
+    print("31: Washington")
+    print("32: Wyoming")
     choice = input("Enter the number of your choice: ")
     return choice
 
@@ -35,25 +62,116 @@ def main():
     start_date = date.strftime(dt_today - timedelta(7), "%m/%d/%Y")
 
     if choice == '1':
+        siteurl = "https://www.alabamapublicnotices.com/(S(nowvxlolxhrtwtcyhgyzexk4))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '2':
+        siteurl = "https://www.arizonapublicnotices.com/"
+        dfall = idaho2023.idPublicNotice(siteurl, start_date, end_date)
+    elif choice == '3':
+        siteurl = "https://www.arkansaspublicnotices.com/(S(iwv5ywh1d4pwglzi3tgp1pqd))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '4':
+        # California scraping
+        siteurl = "https://www.capublicnotice.com/"  # Ensure this is the correct URL for California
+        dfall = idaho2023.idPublicNotice(siteurl, start_date, end_date)
+    elif choice == '5':
+        siteurl = "https://www.publicnoticecolorado.com/"
+        dfall = idaho2023.idPublicNotice(siteurl, start_date, end_date)
+    elif choice == '6':
+        siteurl = "https://www.georgiapublicnotice.com/"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '7':
         # Idaho scraping
         siteurl = "https://www.idahopublicnotices.com/"
         dfall = idaho2023.idPublicNotice(siteurl, start_date, end_date)
-    elif choice == '2':
-        # Georgia scraping
-        siteurl = "https://www.georgiapublicnotice.com/"
+    elif choice == '8':
+        siteurl = "https://www.publicnoticeillinois.com/(S(acg0brnnirfdehovjyj20ig4))/default.aspx"
         dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
-    elif choice == '3':
-        # For Tennessee, implement logic to find the appropriate Friday
-        friday_date = "your_logic_to_find_friday"  # Placeholder for actual logic
-        siteurl = f"https://tnledger.com/Notices.aspx?noticesDate={friday_date}"
-        dfall = tnledger.tnPublicNotice(siteurl)
-    elif choice == '4':
-        # Nevada scraping, assuming you want to use version2 for Nevada as well
+    elif choice == '9':
+        siteurl = "https://www.publicnoticeindiana.com/(S(0flhp1nk4qvrrzyqemgomgu3))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '10':
+        siteurl = "https://www.kansaspublicnotices.com/"
+        dfall = idaho2023.idPublicNotice(siteurl, start_date, end_date)
+    elif choice == '11':
+        siteurl = "https://mainenotices.com/(S(2dgdqe0pz4guvnhoycxjue5z))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '12':
+        siteurl = "https://www.masspublicnotices.org/(S(s43e0tkcc2aq0gdqjybak0dg))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '13':
+        siteurl = "https://www.mnpublicnotice.com/(S(o4rwbjgyn5rcujmjrkfenwem))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '14':
+        siteurl = "https://www.mspublicnotices.org/(S(yta5ummmhaeoa0oiyrf4abzf))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '15':
+        siteurl = "https://www.mopublicnotices.com/(S(skzjxohmoq31x4t4ph0eyxbe))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '16':
+        siteurl = "https://www.nepublicnotices.com/(S(n3vqaf3qvny5yn2tgas5puzz))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '17':
         siteurl = "https://www.nevadapublicnotice.com/"
         dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
-    elif choice == '5':
-        # California scraping
-        siteurl = "https://www.capublicnotice.com/"  # Ensure this is the correct URL for California
+    elif choice == '18':
+        siteurl = "https://www.njpublicnotices.com/(S(sj4lgax2dyi22mp2wr00sc5k))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '19':
+        siteurl = "https://www.newmexicopublicnotices.com/"
+        dfall = idaho2023.idPublicNotice(siteurl, start_date, end_date)
+    elif choice == '20':
+        siteurl = "https://www.ncnotices.com/(S(30tkdtpubdykkyopexzalu42))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '21':
+        siteurl = "https://www.publicnoticesohio.com/"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '22':
+        siteurl = "https://www.publicnoticeoregon.com/(S(udtynok3jnxr5v1jhkkzidly))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '23':
+        siteurl = "https://www.publicnoticepa.com/"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '24':
+        siteurl = "https://www.scpublicnotices.com/(S(zr3qozc5sxwqhfmbajyvcomk))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '25':
+        siteurl = "https://www.sdpublicnotices.com/"
+        dfall = idaho2023.idPublicNotice(siteurl, start_date, end_date)
+    elif choice == '26':
+        siteurl = "https://www.tnpublicnotice.com/(S(efycd0n34a1pcelrrxmq0mu4))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '27':
+        # For Tennessee, implement logic to find the appropriate Friday
+        today = date.today()
+        day_of_week = today.isoweekday()
+        
+        if day_of_week != 5:
+            if day_of_week < 5:
+                day_of_week += 7
+            day_to_subtract = day_of_week - 5
+            date_to_search = today - timedelta(days=day_to_subtract)
+        else:
+            date_to_search = today
+        
+        friday_date = date.strftime(date_to_search, "%m/%d/%Y")
+        
+        siteurl = f"https://tnledger.com/Notices.aspx?noticesDate={friday_date}"
+        dfall = tnledger.tnPublicNotice(siteurl)
+    elif choice == '28':
+        siteurl = "https://www.texaspublicnotices.com/(S(kzeegwavdu3mlnumbjexd3t2))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '29':
+        siteurl = "https://www.utahlegals.com/(S(f2w4igb1u1hct4jzwd5c3ms2))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '30':
+        siteurl = "https://www.publicnoticevirginia.com/(S(fzf3pmn4rtene0kkb2fz110e))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '31':
+        siteurl = "https://www.wapublicnotices.com/(S(4bhn45cvryy0ehlmhmu4wsbu))/default.aspx"
+        dfall = georgia.ga_publicnotice(siteurl, start_date, end_date)
+    elif choice == '32':
+        siteurl = "https://www.wyopublicnotices.com/"
         dfall = idaho2023.idPublicNotice(siteurl, start_date, end_date)
     else:
         print("Invalid choice. Please run the script again and select a valid option.")
